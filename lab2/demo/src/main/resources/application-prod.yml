@@ -1,0 +1,6 @@
+app:
+  data:
+    path: classpath:data/products-prod.json
+    format: json
+    encoding: UTF-8
+    label: "from application-prod.yml"

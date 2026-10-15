@@ -1,2 +1,10 @@
+C:\Users\Roberto\OneDrive\Desktop\JAVA ENTRIPRISE\lab2\demo\src\main\java\com\example\demo\actuator\DataSourceInfoContributor.java
+C:\Users\Roberto\OneDrive\Desktop\JAVA ENTRIPRISE\lab2\demo\src\main\java\com\example\demo\config\DataProperties.java
 C:\Users\Roberto\OneDrive\Desktop\JAVA ENTRIPRISE\lab2\demo\src\main\java\com\example\demo\DemoApplication.java
 C:\Users\Roberto\OneDrive\Desktop\JAVA ENTRIPRISE\lab2\demo\src\main\java\com\example\demo\HelloController.java
+C:\Users\Roberto\OneDrive\Desktop\JAVA ENTRIPRISE\lab2\demo\src\main\java\com\example\demo\model\Product.java
+C:\Users\Roberto\OneDrive\Desktop\JAVA ENTRIPRISE\lab2\demo\src\main\java\com\example\demo\reader\CsvProductReader.java
+C:\Users\Roberto\OneDrive\Desktop\JAVA ENTRIPRISE\lab2\demo\src\main\java\com\example\demo\reader\JsonProductReader.java
+C:\Users\Roberto\OneDrive\Desktop\JAVA ENTRIPRISE\lab2\demo\src\main\java\com\example\demo\reader\ProductReader.java
+C:\Users\Roberto\OneDrive\Desktop\JAVA ENTRIPRISE\lab2\demo\src\main\java\com\example\demo\runner\StartupRunner.java
+C:\Users\Roberto\OneDrive\Desktop\JAVA ENTRIPRISE\lab2\demo\src\main\java\com\example\demo\service\ProductRepository.java

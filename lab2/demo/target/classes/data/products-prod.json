@@ -1,0 +1,5 @@
+[
+  {"id": 1, "name": "Server", "price":15000.0},
+  {"id": 2, "name": "Switch", "price":2300.0},
+  {"id": 3, "name":"Router", "price": 1800.0}
+]

@@ -1,2 +1,11 @@
 com\example\demo\DemoApplication.class
+com\example\demo\service\ProductRepository.class
 com\example\demo\HelloController.class
+com\example\demo\reader\JsonProductReader$1.class
+com\example\demo\runner\StartupRunner.class
+com\example\demo\actuator\DataSourceInfoContributor.class
+com\example\demo\reader\JsonProductReader.class
+com\example\demo\config\DataProperties.class
+com\example\demo\reader\CsvProductReader.class
+com\example\demo\model\Product.class
+com\example\demo\reader\ProductReader.class

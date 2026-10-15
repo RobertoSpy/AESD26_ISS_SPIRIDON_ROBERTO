@@ -1,0 +1,8 @@
+app:
+  data:
+    path: classpath:data/products-dev.csv
+    format: csv
+    delimiter: ","
+    skip-header: true
+    encoding: UTF-8
+    label: "from application-dev.yml"
