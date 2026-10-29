@@ -4,9 +4,11 @@ import com.example.lab4.customer.Customer;
 import com.example.lab4.customer.CustomerRepository;
 
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
+@Order(1)
 public class CustomerRunner implements CommandLineRunner {
 
     private final CustomerRepository customers;

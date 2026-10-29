@@ -1,28 +1,29 @@
 package com.example.lab4.customer;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.example.lab4.delivery.Delivery;
+import com.example.lab4.person.Person;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "customers")
-public class Customer {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(nullable = false)
-    private String name;
-
-    @Column(nullable = false, unique = true)
-    private String email;
-
-    @Column(nullable = false, unique = true)
-    private String phone;
+@Getter
+@Setter
+@ToString(callSuper = true)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class Customer extends Person {
 
     @Column(nullable = false)
     private String address;
@@ -30,27 +31,19 @@ public class Customer {
     @Column(nullable = false)
     private String coordinates;
 
-    protected Customer() {
-    }
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Setter(AccessLevel.NONE)
+    @ToString.Exclude
+    private List<Delivery> deliveries = new ArrayList<>();
 
     public Customer(String name, String email, String phone, String address, String coordinates) {
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
+        super(name, email, phone);
         this.address = address;
         this.coordinates = coordinates;
     }
 
-    public Long getId() { return id; }
-    public String getName() { return name; }
-    public String getEmail() { return email; }
-    public String getPhone() { return phone; }
-    public String getAddress() { return address; }
-    public String getCoordinates() { return coordinates; }
-
-    @Override
-    public String toString() {
-        return "Customer{id=" + id + ", name='" + name + "', email='" + email + "', phone='" + phone
-                + "', address='" + address + "', coordinates='" + coordinates + "'}";
+    public void addDelivery(Delivery delivery) {
+        deliveries.add(delivery);
+        delivery.setCustomer(this);
     }
 }
